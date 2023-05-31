@@ -1,0 +1,24 @@
+/* * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+border: 1px solid red;
+} */
+
+#look{
+    display: flex;
+    justify-content: center;
+}
+
+#city{
+    text-align: center;
+    margin: 40px;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+

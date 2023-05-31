@@ -12,10 +12,10 @@ document.getElementById("search").addEventListener("click", function(){
     
         document.getElementById("city").innerText = data.city.name
         document.getElementById("date").innerText = dayjs.unix(data.list[0].dt).format("M/D/YYYY")
-        document.getElementById("icon").src = "https://openweathermap.org/img/wn/"+ data.list[0].weather[0].icon +"@2x.png"
         document.getElementById("temp").innerText = data.list[0].main.temp
         document.getElementById("wind").innerText = data.list[0].wind.speed
         document.getElementById("humidity").innerText = data.list[0].main.humidity
+        document.getElementById("icon").src = "https://openweathermap.org/img/wn/"+ data.list[0].weather[0].icon +"@2x.png"
         for(var i = 7; i < data.list.length; i += 8){
             var day = data.list[i]
             var fiveDate = document.createElement("p")
@@ -26,10 +26,6 @@ document.getElementById("search").addEventListener("click", function(){
             fiveTemp.innerText = day.main.temp
             document.getElementById("five").appendChild(fiveTemp)
 
-            var fiveIcon = document.createElement("img")
-            fiveIcon.src = "https://openweathermap.org/img/wn/"+ day.weather[0].icon +"@2x.png"
-            document.getElementById("five").appendChild(fiveIcon)
-
             var fiveWind = document.createElement("p")
             fiveWind.innerText = day.wind.speed
             document.getElementById("five").appendChild(fiveWind)
@@ -37,6 +33,10 @@ document.getElementById("search").addEventListener("click", function(){
             var fiveHumidity = document.createElement("p")
             fiveHumidity.innerText = day.main.humidity
             document.getElementById("five").appendChild(fiveHumidity)
+
+            var fiveIcon = document.createElement("img")
+            fiveIcon.src = "https://openweathermap.org/img/wn/"+ day.weather[0].icon +"@2x.png"
+            document.getElementById("five").appendChild(fiveIcon)
         }
     })
 }
