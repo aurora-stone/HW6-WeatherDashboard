@@ -16,4 +16,4 @@ THEN I am again presented with current and future conditions for that city
 ![Image](./screenshot.png)
 
 ## Link
-[Link to Application](https://aurora-stone.github.io/)
+[Link to Application](https://aurora-stone.github.io/HW6-WeatherDashboard/)
