@@ -1,6 +1,6 @@
-# WEATHER DASHBOARD
+# Weather Dashboard
 
-I made a coding quiz using javascript, CSS, and an API key. I worked with the following criteria:
+I made a weather dashboard using javascript, CSS, and an API key. I worked with the following criteria:
 
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city
