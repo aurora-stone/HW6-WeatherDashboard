@@ -1,7 +1,7 @@
 document.getElementById("search").addEventListener("click", function(){
 
     var city = document.getElementById("input").value
-    var url = "http://api.openweathermap.org/data/2.5/forecast?q="+ city +"&appid=60ebe634619c5700bf67dc2646a55408&units=imperial"
+    var url = "https://api.openweathermap.org/data/2.5/forecast?q="+ city +"&appid=60ebe634619c5700bf67dc2646a55408&units=imperial"
 
     fetch(url)
     .then(function(res){
