@@ -16,27 +16,39 @@ document.getElementById("search").addEventListener("click", function(){
         document.getElementById("wind").innerText = data.list[0].wind.speed
         document.getElementById("humidity").innerText = data.list[0].main.humidity
         document.getElementById("icon").src = "https://openweathermap.org/img/wn/"+ data.list[0].weather[0].icon +"@2x.png"
+        document.getElementById("five").innerHTML = ""
         for(var i = 7; i < data.list.length; i += 8){
+            
+            var cardEl = document.createElement("div")
+            cardEl.classList.add("card")
             var day = data.list[i]
             var fiveDate = document.createElement("p")
             fiveDate.innerText = dayjs.unix(day.dt).format("M/D/YYYY")
-            document.getElementById("five").appendChild(fiveDate)
+            // document.getElementById("five").appendChild(fiveDate)
+            cardEl.appendChild(fiveDate)
+            // append fiveDate to the card div
 
             var fiveTemp = document.createElement("p")
             fiveTemp.innerText = day.main.temp
-            document.getElementById("five").appendChild(fiveTemp)
+            // document.getElementById("five").appendChild(fiveTemp)
+            cardEl.appendChild(fiveTemp)
 
             var fiveWind = document.createElement("p")
             fiveWind.innerText = day.wind.speed
-            document.getElementById("five").appendChild(fiveWind)
+            // document.getElementById("five").appendChild(fiveWind)
+            cardEl.appendChild(fiveWind)
 
             var fiveHumidity = document.createElement("p")
             fiveHumidity.innerText = day.main.humidity
-            document.getElementById("five").appendChild(fiveHumidity)
+            // document.getElementById("five").appendChild(fiveHumidity)
+            cardEl.appendChild(fiveHumidity)
 
             var fiveIcon = document.createElement("img")
             fiveIcon.src = "https://openweathermap.org/img/wn/"+ day.weather[0].icon +"@2x.png"
-            document.getElementById("five").appendChild(fiveIcon)
+            // document.getElementById("five").appendChild(fiveIcon)
+            cardEl.appendChild(fiveIcon)
+
+            document.getElementById("five").appendChild(cardEl)
         }
     })
 }
